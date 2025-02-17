@@ -1,0 +1,70 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Profile Container */
+.profile-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* Inputs and Select */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* File Input */
+input[type="file"] {
+    background: white;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #ff4f5a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #e02936;
+    transform: scale(1.05);
+}
