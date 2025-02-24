@@ -2,10 +2,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-image: url('your-background-image.jpg'); /* Replace with your actual image */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Dark blue gradient */
   background-size: cover;
   background-position: center;
+  color: white;
 }
 
 /* Dashboard Layout */
@@ -16,47 +17,56 @@ body {
 
 /* Sidebar Navigation */
 .sidebar {
-  width: 250px;
+  width: 260px;
   height: 100vh;
-  background-color: #1b2838;
+  background: linear-gradient(to bottom, #1e3c72, #2a5298); /* Gradient for sidebar */
   padding-top: 20px;
   position: fixed;
   left: 0;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar h2 {
-  text-align: center;
-  color: white;
+  color: #ffffff;
   margin-bottom: 30px;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .sidebar a {
   display: block;
+  width: 90%;
   padding: 12px;
   color: white;
   text-decoration: none;
   text-align: center;
   font-size: 18px;
+  font-weight: 500;
   transition: 0.3s;
+  border-radius: 5px;
 }
 
 .sidebar a:hover {
-  background-color: #ff9800;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Warm hover effect */
   color: black;
 }
 
+/* Logout Button */
 .logout-btn {
   width: 90%;
-  margin: 20px auto;
-  display: block;
-  text-align: center;
-  background-color: red;
+  margin-top: auto;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff512f, #dd2476);
   color: white;
   padding: 12px;
-  border-radius: 5px;
   font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
   text-decoration: none;
   transition: 0.3s;
   border: none;
@@ -64,37 +74,208 @@ body {
 }
 
 .logout-btn:hover {
-  background-color: darkred;
+  background: linear-gradient(to right, #c31432, #240b36);
 }
 
 /* Main Content */
 .main-content {
-  margin-left: 250px; /* Ensures content doesn't overlap the sidebar */
-  width: calc(100% - 250px);
-  padding-top: 60px; /* Creates space for the fixed heading */
+  margin-left: 260px; /* Ensures content doesn't overlap the sidebar */
+  width: calc(100% - 260px);
+  padding-top: 70px; /* Creates space for the fixed header */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Dashboard Header (Heading) */
+/* Dashboard Header */
 .dashboard-header {
-  position: fixed; /* Sticks it to the top */
+  position: fixed;
   top: 0;
-  left: 250px; /* Aligns it to start after the sidebar */
-  width: calc(100% - 250px); /* Makes it take full width of the content */
-  background-color: rgb(227, 80, 80);
+  left: 260px; /* Aligns with sidebar */
+  width: calc(100% - 260px);
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Professional gradient */
   text-align: center;
   padding: 15px 0;
   font-size: 28px;
   font-weight: bold;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000; /* Keeps it above other content */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 
 .dashboard-header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+
+  .dashboard-header {
+    left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 100px;
+  }
+
+  .dashboard-header {
+    left: 0;
+    width: 100%;
+  }
+}
+body{
+  /* background: linear-gradient(to right, #9f9d3c, #c9b90a, #a1a5a7);
+   */
+   background-image: url(back1.jpeg);
+}
+
+
+
+
+/* Container for the entire dashboard */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  background-color: #2f4f4f;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-links li {
+  margin: 15px 0;
+}
+
+.logout-btn {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Main content styles */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Header styles */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Profile section */
+.profile-section {
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+/* Users list and card styling */
+.users-list {
+  margin-top: 20px;
+}
+
+.profile-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.profile-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+}
+
+.profile-card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.profile-card-body {
+  margin-top: 10px;
+}
+
+.profile-card-body h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.profile-card-body p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.view-profile-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.view-profile-btn:hover {
+  background-color: #2980b9;
+}
