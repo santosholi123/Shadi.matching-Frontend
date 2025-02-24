@@ -1,47 +1,39 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
-import "./styles.css";
-
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "./profile.css";
 const Profile = () => {
-  const [user, setUser] = useState(null);
-  const navigate = useNavigate(); // Hook to navigate to other routes
+  const { id } = useParams(); // Retrieve the user ID from the URL
+  const [userProfile, setUserProfile] = useState(null);
 
   useEffect(() => {
+    // Fetch user profile based on ID
     const fetchUserProfile = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/users/profile");
-        setUser(response.data);
+        const response = await fetch(`http://localhost:3000/api/users/profile/${id}`);
+        const data = await response.json();
+        setUserProfile(data);
       } catch (error) {
-        console.error("Error fetching user profile:", error);
+        console.error("Error fetching profile:", error);
       }
     };
-    fetchUserProfile();
-  }, []);
 
-  const handleBackToDashboard = () => {
-    navigate("/dashboard"); // Navigate back to the Dashboard
-  };
+    fetchUserProfile();
+  }, [id]);
 
   return (
-    <div className="profile-container">
-      <h1>User Profile</h1>
-      {user ? (
-        <div>
-          <img src={user.profilePic} alt="Profile" className="profile-pic" />
-          <p><strong>Name:</strong> {user.full_name}</p>
-          <p><strong>Email:</strong> {user.email}</p>
-          <p><strong>Date of Birth:</strong> {user.dob}</p>
-          <p><strong>Bio:</strong> {user.bio}</p>
+    <div className="profile-page">
+      {userProfile ? (
+        <div className="profile-details">
+          <h1>{userProfile.full_name}</h1>
+          <p><strong>Email:</strong> {userProfile.email}</p>
+          <p><strong>phoneNumber:</strong> {userProfile.phoneNumber}</p>
+          <p><strong>Date of Birth:</strong> {userProfile.dob}</p>
+          <p><strong>Bio:</strong> {userProfile.bio}</p>
+          <img src={userProfile.profilePic} alt="Profile" className="profile-img" />
         </div>
       ) : (
         <p>Loading profile...</p>
       )}
-
-      {/* Back to Dashboard button */}
-      <button onClick={handleBackToDashboard} className="back-button">
-        Back to Dashboard
-      </button>
     </div>
   );
 };

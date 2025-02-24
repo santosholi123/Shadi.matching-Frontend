@@ -1,39 +1,104 @@
-/* styles.css */
-.profile-container {
+/* profile.css */
+
+/* Profile Page Styling */
+/* .profile-page { */
+  /* background: linear-gradient(to right, #ff7e5f, #feb47b); Gradient background */
+  /* padding: 50px; */
+  /* min-height: 100vh; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+/* } */
+
+/* Profile Details Container */
+.profile-details {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on profile details container */
+.profile-details:hover {
+  transform: scale(1.05);
+}
+
+/* Profile Header */
+.profile-details h1 {
+  font-size: 2.4rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+/* Profile Info Text */
+.profile-details p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 12px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Strong Text (labels) */
+.profile-details strong {
+  font-weight: 600;
+  color: #ff7e5f;
+}
+
+/* Profile Image Styling */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 5px solid #feb47b;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect on profile image */
+.profile-img:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Button Styling */
+.profile-page .back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #ff7e5f;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-page .back-button:hover {
+  background-color: #feb47b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .profile-details {
+    width: 90%;
     padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 0 auto;
   }
-  
-  .profile-pic {
+
+  .profile-details h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
   }
-  
-  .profile-container h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Position the button at the bottom-right of the viewport */
-  .back-button {
-    position: fixed;  /* Position the button relative to the viewport */
-    bottom: 20px;     /* 20px from the bottom of the screen */
-    right: 20px;      /* 20px from the right of the screen */
-    background-color: #4CAF50; /* Green color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .back-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-  }
-  
+}
