@@ -68,3 +68,17 @@ input[type="file"] {
     background-color: #e02936;
     transform: scale(1.05);
 }
+
+
+.profile-pic {
+    margin-top: 10px;
+  }
+  
+  .profile-pic-preview img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+  }
+  
