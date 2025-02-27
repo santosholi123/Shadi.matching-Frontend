@@ -1,0 +1,186 @@
+/* Home Page Styles - Clean & Professional Design */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Home Container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+/* Header Section */
+.home-header {
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  color: white;
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.home-header p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* Dashboard Overview Section */
+.dashboard-section {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 900px;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard-section:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-section h2 {
+  font-size: 30px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: bold;
+  position: relative;
+}
+
+.dashboard-section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 50px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.dashboard-section p {
+  font-size: 16px;
+  color: #7f8c8d;
+  text-align: justify;
+}
+
+/* Features Section */
+.features-section {
+  background-color: #ecf0f1;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.features-section h2 {
+  font-size: 30px;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.features-section ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 18px;
+  color: #7f8c8d;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.features-section li {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.features-section li:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* Call-To-Action (CTA) Section */
+.cta-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cta-section h2 {
+  font-size: 30px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.cta-section p {
+  font-size: 18px;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #8e44ad;
+  color: white;
+  font-size: 18px;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #3498db;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.home-footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.home-footer p {
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .features-section ul {
+      grid-template-columns: 1fr;
+  }
+
+  .cta-button {
+      font-size: 16px;
+      padding: 10px 25px;
+  }
+}
