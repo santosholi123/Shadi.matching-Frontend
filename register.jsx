@@ -9,6 +9,7 @@ const Register = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    phoneNumber: "",
     dob: "",
     bio: "",
     profilePic: null,
@@ -85,6 +86,8 @@ const Register = () => {
         <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
         <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
         <input type="password" name="confirmPassword" placeholder="Confirm Password" value={formData.confirmPassword} onChange={handleChange} required />
+        <input type="number" name="phoneNumber" placeholder="Phone Number" value={formData.phoneNumber} onChange={handleChange}  />
+
         <input type="date" name="dob" value={formData.dob} onChange={handleChange} required />
         <textarea name="bio" placeholder="Tell us about yourself" rows="4" value={formData.bio} onChange={handleChange}></textarea>
         <input type="file" name="profilePic" accept="image/*" onChange={handleFileChange} />
