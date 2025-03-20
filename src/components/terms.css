@@ -1,0 +1,139 @@
+/* ========================================
+   Terms & Conditions Page - Shaadi Matching
+   Clean, Modern & Responsive Design
+========================================= */
+
+.terms-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Header Section */
+  .terms-header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 30px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .terms-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .terms-header p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 5px;
+  }
+  
+  /* Content Section */
+  .terms-content {
+    text-align: left;
+    padding: 25px;
+  }
+  
+  .terms-content h2 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .terms-content h2::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #6a11cb;
+    display: block;
+    margin-top: 5px;
+    border-radius: 2px;
+  }
+  
+  .terms-content p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.7;
+    text-align: justify;
+  }
+  
+  /* Action Buttons */
+  .terms-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  .back-button,
+  .agree-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .back-button {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .agree-button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+  }
+  
+  .back-button:hover {
+    background-color: #bbb;
+  }
+  
+  .agree-button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .terms-container {
+      width: 90%;
+      margin: 30px auto;
+    }
+  
+    .terms-actions {
+      flex-direction: column;
+    }
+  
+    .back-button,
+    .agree-button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Smooth Fade-In Effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
